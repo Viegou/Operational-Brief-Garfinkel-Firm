@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VA Training — Keith Garfinkel</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --black: #0a0a0a;
+            --red: #D72B2B;
+            --amber: #E8A020;
+            --green: #1A8A4A;
+            --white: #F5F2EC;
+            --gray: #2a2a2a;
+            --light-gray: #3d3d3d;
+            --muted: #888;
+            --darker-gray: #1a1a1a;
+        }
+
+        body {
+            background: var(--darker-gray);
+            color: var(--white);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 11px;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: var(--black);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+            padding: 40px;
+        }
+
+        /* HEADER */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 3px solid var(--red);
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            font-family: 'DM Mono', monospace;
+            font-size: 10px;
+            width: 100%;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(248, 160, 32, 0.3);
+            margin-bottom: 15px;
+        }
+
+        nav a {
+            color: #F5F2EC;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        nav a:nth-child(4) {
+            color: var(--amber);
+            font-weight: 600;
+        }
+
+        .header-left h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 36px;
+            letter-spacing: 2px;
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .header-left h1 span {
+            color: var(--red);
+        }
+
+        .header-left p {
+            font-family: 'DM Mono', monospace;
+            font-size: 9px;
+            color: var(--muted);
+            letter-spacing: 0.5px;
+        }
+
+        .section-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 16px;
+            letter-spacing: 2px;
+            color: var(--red);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--light-gray);
+            padding-bottom: 8px;
+        }
+
+        .block {
+            background: var(--gray);
+            border-left: 4px solid var(--red);
+            padding: 12px 14px;
+            border-radius: 2px;
+            margin-bottom: 12px;
+        }
+
+        .block.amber {
+            border-left-color: var(--amber);
+        }
+
+        .block.green {
+            border-left-color: var(--green);
+        }
+
+        .block-label {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            color: var(--muted);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .key-line {
+            font-family: 'DM Mono', monospace;
+            font-size: 10px;
+            color: var(--white);
+            line-height: 1.6;
+            margin-bottom: 6px;
+            padding: 6px 8px;
+            background: var(--light-gray);
+            border-radius: 2px;
+        }
+
+        .key-line strong {
+            color: var(--amber);
+        }
+
+        .list-item {
+            font-family: 'DM Mono', monospace;
+            font-size: 10px;
+            color: var(--white);
+            line-height: 1.6;
+            margin-bottom: 8px;
+            padding-left: 16px;
+            position: relative;
+        }
+
+        .list-item::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--amber);
+            font-weight: 600;
+        }
+
+        .pill {
+            display: inline-block;
+            background: var(--red);
+            color: var(--white);
+            font-size: 8px;
+            font-family: 'DM Mono', monospace;
+            padding: 3px 7px;
+            border-radius: 2px;
+            margin-bottom: 8px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-right: 6px;
+        }
+
+        .pill.amber {
+            background: var(--amber);
+            color: var(--black);
+        }
+
+        .pill.green {
+            background: var(--green);
+            color: var(--white);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 9px;
+            font-family: 'DM Mono', monospace;
+            margin: 12px 0;
+        }
+
+        table th {
+            background: var(--light-gray);
+            border: 1px solid var(--muted);
+            padding: 6px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--amber);
+        }
+
+        table td {
+            border: 1px solid var(--light-gray);
+            padding: 6px;
+            line-height: 1.4;
+        }
+
+        table tr:nth-child(even) td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .footer-bar {
+            border-top: 2px solid var(--light-gray);
+            padding-top: 12px;
+            margin-top: 30px;
+            font-family: 'DM Mono', monospace;
+            font-size: 9px;
+            color: var(--muted);
+            text-align: center;
+        }
+
+        .footer-bar strong {
+            color: var(--amber);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="MP-Aged-Script-Keith-Garfinkel.html">AGED SCRIPT</a>
+            <a href="scripts.html">SCRIPTS</a>
+            <a href="training.html">TRAINING</a>
+            <a href="case-studies.html">CASE STUDIES</a>
+        </nav>
+        <div class="header-left">
+            <h1>VA <span>TRAINING</span></h1>
+            <p>Keith Garfinkel — Product Knowledge + Lead Qualification</p>
+        </div>
+    </div>
+
+    <!-- PRODUCT KNOWLEDGE -->
+    <div class="section-title">📚 Core Product Knowledge</div>
+
+    <div class="block green">
+        <div class="block-label">IUL — Index Universal Life (Premium Product)</div>
+        <div class="key-line"><strong>Growth:</strong> 7-8% tied to the market</div>
+        <div class="key-line"><strong>Living Benefits:</strong> Pays out if you have heart attack, stroke, or critical illness WHILE ALIVE</div>
+        <div class="key-line"><strong>Best For:</strong> Healthy clients</div>
+        <div class="key-line"><strong>Top Carriers:</strong> Mutual of Omaha, Foresters, Transamerica</div>
+    </div>
+
+    <div class="block amber">
+        <div class="block-label">Whole Life (For Sick Clients)</div>
+        <div class="key-line"><strong>Growth:</strong> Fixed 3%</div>
+        <div class="key-line"><strong>Living Benefits:</strong> None</div>
+        <div class="key-line"><strong>Best For:</strong> Sick/unhealthy people who can't qualify for IUL</div>
+        <div class="key-line"><strong>Cost:</strong> Expensive (~$100/mo for $10k coverage)</div>
+        <div class="key-line"><strong>Top Carriers:</strong> Mutual of Omaha, Foresters, American Home Life</div>
+    </div>
+
+    <div class="block">
+        <div class="block-label">PMI vs. Mortgage Protection (CRITICAL DIFFERENCE)</div>
+        <table>
+            <tr>
+                <th>PMI</th>
+                <th>Mortgage Protection (What We Sell)</th>
+            </tr>
+            <tr>
+                <td>Protects the <strong>BANK</strong> if you default</td>
+                <td>Protects your <strong>FAMILY</strong> if you die or get critically ill</td>
+            </tr>
+            <tr>
+                <td>Paid TO the bank when you die</td>
+                <td>Paid TO your family to pay off the house</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- LEAD QUALIFICATION -->
+    <div class="section-title">🎯 Lead Qualification Checklist</div>
+
+    <div class="block">
+        <div class="block-label">Must-Ask Questions (In Order)</div>
+        <div class="list-item"><strong>Question 1:</strong> "Do you currently have any life or mortgage protection?"</div>
+        <div class="list-item" style="padding-left: 32px; font-style: italic;">If yes → get carrier and monthly payment.</div>
+        <div class="list-item"><strong>Question 2:</strong> "Are you the decision-maker, or does someone else (spouse, etc.) need to be on the line?"</div>
+        <div class="list-item" style="padding-left: 32px; font-style: italic;">If spouse needed → GET THEM ON NOW. Don't accept callbacks.</div>
+        <div class="list-item"><strong>Question 3:</strong> "What's the approximate mortgage balance on your home?"</div>
+        <div class="list-item" style="padding-left: 32px; font-style: italic;">They need at least $200k coverage.</div>
+        <div class="list-item"><strong>Question 4:</strong> "Do you have any major health issues we should know about?"</div>
+        <div class="list-item" style="padding-left: 32px; font-style: italic;">This tells you IUL vs. Whole Life.</div>
+    </div>
+
+    <!-- THE GHOST ANALOGY -->
+    <div class="section-title">👻 The Ghost Analogy (Deepening the Why)</div>
+
+    <div class="block">
+        <div class="block-label">DEEPENING EMOTIONAL DISCOVERY</div>
+        <div class="key-line">"Let's say you passed away yesterday, and I'm talking to your ghost right now. We are looking at this from the outside in. What is your wife doing for money to pay the mortgage today?"</div>
+        <div class="key-line" style="margin-top: 8px; font-style: italic; background: rgba(215, 43, 43, 0.2);">This is NOT a close. This is forcing them to visualize the nightmare so Keith can build the closing later.</div>
+    </div>
+
+    <!-- APPOINTMENT BOOKING -->
+    <div class="section-title">📅 Appointment Booking Rules</div>
+
+    <div class="block">
+        <div class="block-label">The Security Code (NO-SHOW KILLER)</div>
+        <div class="pill">DO NOT SKIP</div>
+        <div class="key-line"><span class="hard">If they won't grab a pen and write it down, they WILL NOT SHOW UP.</span></div>
+        <div class="key-line">Script: "Grab a pen. Your security code is [LAST 4]. Read it back to me."</div>
+    </div>
+
+    <div class="block green">
+        <div class="block-label">Best Times to Book</div>
+        <div class="list-item"><strong>🟢 Morning (7-9am):</strong> Before work. Most committed.</div>
+        <div class="list-item"><strong>🟡 Evening (5-7pm):</strong> After work. Good secondary.</div>
+        <div class="list-item"><strong>🔴 AVOID Lunch (12-1pm):</strong> Low show rates.</div>
+        <div class="list-item"><strong>🔴 AVOID Late (8pm+):</strong> Tired leads cancel last-minute.</div>
+    </div>
+
+    <div class="block amber">
+        <div class="block-label">Multi-Decision Makers (SPOUSE TIE-DOWN)</div>
+        <div class="pill amber">MANDATORY</div>
+        <div class="key-line"><strong>Get the spouse on the phone NOW.</strong> Do not accept "I'll ask my wife and call you back."</div>
+        <div class="key-line">Script: "Keith requires both of you on the line. What time today or tomorrow are you both home together?"</div>
+    </div>
+
+    <!-- FINANCIAL INVENTORY -->
+    <div class="section-title">💰 Financial Inventory (FI) — What to Capture</div>
+
+    <div class="block">
+        <div class="block-label">Capture These Fields (Keep it Conversational)</div>
+        <div class="key-line">📍 Full address (confirm)</div>
+        <div class="key-line">👤 Spouse/co-borrower on loan?</div>
+        <div class="key-line">💰 Current mortgage balance</div>
+        <div class="key-line">📅 Years left on loan</div>
+        <div class="key-line">❤️ Major health conditions</div>
+        <div class="key-line">🚬 Tobacco use</div>
+        <div class="key-line">🎂 Date of birth</div>
+        <div class="key-line" style="font-style: italic; background: rgba(232, 160, 32, 0.1);">Keep it conversational. You're filling a file, not interrogating.</div>
+    </div>
+
+    <div class="footer-bar">
+        <strong>GARFINKEL FIRM</strong> · VA TRAINING · CONFIDENTIAL<br>
+        Master these concepts. Ask questions. No shortcuts.
+    </div>
+
+</div>
+
+</body>
+</html>
