@@ -3,329 +3,437 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sales Scripts — Keith Garfinkel</title>
+    <title>Scripts & Aged Leads — Garfinkel Firm</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;700&display=swap');
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --black: #0a0a0a;
-            --red: #D72B2B;
-            --amber: #E8A020;
-            --green: #1A8A4A;
-            --white: #F5F2EC;
-            --gray: #2a2a2a;
-            --light-gray: #3d3d3d;
-            --muted: #888;
-            --darker-gray: #1a1a1a;
-        }
-
+        @page { size: Letter; margin: 0.6in; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            background: var(--darker-gray);
-            color: var(--white);
-            font-family: 'DM Sans', sans-serif;
-            font-size: 11px;
-            line-height: 1.5;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 20px auto;
-            background: var(--black);
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
-            padding: 40px;
-        }
-
-        /* HEADER */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            border-bottom: 3px solid var(--red);
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        nav {
-            display: flex;
-            gap: 20px;
-            font-family: 'DM Mono', monospace;
-            font-size: 10px;
-            width: 100%;
-            padding-bottom: 10px;
-            border-bottom: 1px solid rgba(248, 160, 32, 0.3);
-            margin-bottom: 15px;
-        }
-
-        nav a {
-            color: #F5F2EC;
-            text-decoration: none;
-            letter-spacing: 0.5px;
-        }
-
-        nav a:nth-child(3) {
-            color: var(--amber);
-            font-weight: 600;
-        }
-
-        .header-left h1 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 36px;
-            letter-spacing: 2px;
-            line-height: 1;
-            margin-bottom: 4px;
-        }
-
-        .header-left h1 span {
-            color: var(--red);
-        }
-
-        .header-left p {
-            font-family: 'DM Mono', monospace;
-            font-size: 9px;
-            color: var(--muted);
-            letter-spacing: 0.5px;
-        }
-
-        .section-title {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 16px;
-            letter-spacing: 2px;
-            color: var(--red);
-            margin-top: 30px;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            border-bottom: 2px solid var(--light-gray);
-            padding-bottom: 8px;
-        }
-
-        .block {
-            background: var(--gray);
-            border-left: 4px solid var(--red);
-            padding: 12px 14px;
-            border-radius: 2px;
-            margin-bottom: 12px;
-        }
-
-        .block.amber {
-            border-left-color: var(--amber);
-        }
-
-        .block.green {
-            border-left-color: var(--green);
-        }
-
-        .block-label {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 11px;
-            letter-spacing: 1.5px;
-            color: var(--muted);
-            margin-bottom: 8px;
-            text-transform: uppercase;
-        }
-
-        .script-line {
-            font-family: 'DM Mono', monospace;
-            font-size: 10px;
-            color: var(--white);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #1a1a1a;
             line-height: 1.6;
-            margin-bottom: 5px;
+            background: #fff;
+            font-size: 11pt;
         }
-
-        .script-line .fill {
-            color: var(--amber);
-            font-weight: 600;
+        .header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+            color: #fff;
+            padding: 30px 40px;
+            margin-bottom: 25px;
+            border-left: 6px solid #f59e0b;
         }
-
-        .script-line .hard {
-            color: var(--red);
-            font-weight: 600;
+        .header h1 {
+            margin: 0 0 6px 0;
+            font-size: 24pt;
+            font-weight: 800;
+            letter-spacing: -0.5px;
         }
-
-        .script-line .soft {
-            color: #aaa;
+        .header .subtitle {
+            font-size: 10pt;
+            opacity: 0.85;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .container { padding: 0 40px 40px 40px; }
+        h2 {
+            background: #0f172a;
+            color: #fff;
+            padding: 10px 16px;
+            font-size: 13pt;
+            margin: 30px 0 15px 0;
+            border-left: 5px solid #f59e0b;
+            page-break-after: avoid;
+        }
+        h3 {
+            color: #1e3a8a;
+            font-size: 12pt;
+            margin: 20px 0 8px 0;
+            border-bottom: 1px solid #cbd5e1;
+            padding-bottom: 4px;
+            page-break-after: avoid;
+        }
+        .script-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 12px;
+            margin: 10px 0;
             font-style: italic;
-            font-size: 9px;
+            color: #422006;
+            border-radius: 3px;
+            page-break-inside: avoid;
         }
-
-        .pill {
-            display: inline-block;
-            background: var(--red);
-            color: var(--white);
-            font-size: 8px;
-            font-family: 'DM Mono', monospace;
-            padding: 3px 7px;
-            border-radius: 2px;
-            margin-bottom: 8px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
+        .script-box::before {
+            content: "📞 SCRIPT: ";
+            font-weight: 800;
+            font-style: normal;
+            color: #b45309;
         }
-
-        .pill.amber {
-            background: var(--amber);
-            color: var(--black);
+        .warning-box {
+            background: #fee2e2;
+            border-left: 4px solid #dc2626;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 3px;
+            page-break-inside: avoid;
         }
-
-        .pill.green {
-            background: var(--green);
-            color: var(--white);
+        .warning-box::before {
+            content: "⚠ CRITICAL: ";
+            font-weight: 800;
+            color: #991b1b;
         }
-
-        .divider {
-            border: none;
-            border-top: 1px solid var(--light-gray);
-            margin: 8px 0;
+        .info-box {
+            background: #dbeafe;
+            border-left: 4px solid #2563eb;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 3px;
+            page-break-inside: avoid;
         }
-
-        .note {
-            font-size: 9px;
-            color: var(--muted);
-            font-style: italic;
-            margin-top: 5px;
+        .info-box::before {
+            content: "ℹ️ INFO: ";
+            font-weight: 800;
+            color: #0c4a6e;
         }
-
-        .footer-bar {
-            border-top: 2px solid var(--light-gray);
-            padding-top: 12px;
-            margin-top: 30px;
-            font-family: 'DM Mono', monospace;
-            font-size: 9px;
-            color: var(--muted);
+        .green-box {
+            background: #dcfce7;
+            border-left: 4px solid #16a34a;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 3px;
+            page-break-inside: avoid;
+        }
+        .green-box::before {
+            content: "✓ GO: ";
+            font-weight: 800;
+            color: #166534;
+        }
+        .module {
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            padding: 16px;
+            margin: 15px 0;
+            border-radius: 3px;
+            page-break-inside: avoid;
+        }
+        .objection-row {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 12px;
+            margin-bottom: 12px;
+            align-items: start;
+            page-break-inside: avoid;
+        }
+        .obj-trigger {
+            background: #1a1a1a;
+            color: #f59e0b;
+            padding: 8px;
+            border-radius: 3px;
+            font-weight: 700;
+            font-size: 10pt;
+            line-height: 1.4;
+        }
+        .obj-rebuttal {
+            font-size: 10pt;
+            line-height: 1.5;
+            color: #1a1a1a;
+        }
+        ul { margin: 10px 0; padding-left: 20px; }
+        li { margin-bottom: 6px; }
+        .footer {
+            margin-top: 40px;
+            padding: 18px 40px;
+            background: #0f172a;
+            color: #94a3b8;
+            font-size: 9pt;
             text-align: center;
+            border-top: 4px solid #f59e0b;
         }
-
-        .footer-bar strong {
-            color: var(--amber);
+        .footer strong { color: #f59e0b; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            font-size: 10pt;
+            page-break-inside: avoid;
+        }
+        th {
+            background: #1e3a8a;
+            color: #fff;
+            padding: 8px;
+            text-align: left;
+            font-weight: 700;
+        }
+        td {
+            padding: 8px;
+            border-bottom: 1px solid #cbd5e1;
         }
     </style>
 </head>
 <body>
 
+<div class="header">
+    <div class="subtitle">Garfinkel Mortgage Protection & Life Insurance</div>
+    <h1>Scripts & Aged Leads</h1>
+    <div class="subtitle" style="margin-top:8px;">Proven Openers · Objection Kill Sheets · Live Transfer Protocol</div>
+</div>
+
 <div class="container">
 
-    <div class="header">
-        <nav>
-            <a href="index.html">HOME</a>
-            <a href="MP-Aged-Script-Keith-Garfinkel.html">AGED SCRIPT</a>
-            <a href="scripts.html">SCRIPTS</a>
-            <a href="training.html">TRAINING</a>
-            <a href="case-studies.html">CASE STUDIES</a>
-        </nav>
-        <div class="header-left">
-            <h1>SALES <span>SCRIPTS</span></h1>
-            <p>Keith Garfinkel — Wavv Dialer + SMS Templates</p>
-        </div>
+<!-- AGED LEAD SCRIPT -->
+<h2>SECTION 1 — AGED LEAD SCRIPT (The Opener)</h2>
+
+<div class="module">
+    <h3>Step 1: The Opener — Flagged File / Not a Cold Call</h3>
+    <div class="script-box">
+        "Hey [FIRST NAME], this is Zach — I'm the manager for the mortgage protection department here in [COUNTY/STATE]. Your file for the property at [STREET ADDRESS] just came across my desk — and I want to be clear, I'm not cold calling you. You filled out a card and mailed it in to us requesting information on mortgage protection. Your file is flagged in my system and it's still marked as incomplete."
     </div>
-
-    <!-- WAVV DIALER SCRIPTS -->
-    <div class="section-title">📞 Wavv Dialer Scripts</div>
-
-    <div class="block">
-        <div class="block-label">VM #1 — Standard Voicemail</div>
-        <div class="script-line">"Hi, this is Zach calling from Keith Garfinkel's office regarding the digital mortgage protection request you submitted. Keith is the senior manager assigned to your file, and we just need a quick 5 minutes to verify your info so he can get your options over to you. I'm going to shoot you a text, please reply so we can get your file handled."</div>
+    <div class="script-box">
+        "Now I know you closed out with [LENDER NAME] a while back — right after that, we sent out letters about your mortgage protection options... that's the coverage that pays off the home if you get sick or pass away. Do you remember seeing that at all?"
     </div>
-
-    <div class="block amber">
-        <div class="block-label">VM #2 — On Another Line</div>
-        <div class="script-line">"Hi, this is Zach with Keith Garfinkel's office. I am currently wrapping up with another family on my other line, but your file is next on my desk. I will be calling you right back from this exact number in just a few minutes. Please keep your phone nearby."</div>
+    <div class="script-box">
+        "Look — this is my business. This is what I do for a living. And my system is telling me I can save you money. My job is to make sure our clients are best helped — I can't just let your file sit here marked incomplete. It takes 2 minutes to run through a few health and financial questions, then I'll get you on with the Senior Underwriter for a quick 10-minute call. Just to confirm — we're still at [FULL ADDRESS]?"
     </div>
+</div>
 
-    <!-- SMS TEMPLATES -->
-    <div class="section-title">💬 SMS Templates</div>
-
-    <div class="block">
-        <div class="block-label">Scarcity Message — Month-End</div>
-        <div class="script-line">"Keith is closing out all <span class="fill">[MONTH]</span>-end files in the next 48 hours. If we don't hear back, we'll have to mark your request as inactive and you'll lose these options."</div>
+<div class="module">
+    <h3>Step 1b: The Gate Question (Lock It In)</h3>
+    <div class="green-box">
+        "Pricing requirements changed recently. A lot of coverage bought in the last two years can be replaced for much cheaper today. If Keith can save you a significant amount of money every month while keeping your family fully protected, will you take 5 minutes to speak to him tomorrow?"
     </div>
+    <p style="font-size: 10pt; color: #666; margin-top: 8px;">
+        <strong>Rule:</strong> If they say NO to this question, they are a <strong>guaranteed no-show</strong>. Mark and move on.
+    </p>
+</div>
 
-    <div class="block amber">
-        <div class="block-label">Security Code Confirmation</div>
-        <div class="script-line">"Your security code is <span class="fill">[LAST 4]</span>. Text back CONFIRMED so we have you locked in for <span class="fill">[DAY]</span> at <span class="fill">[TIME]</span>."</div>
+<div class="module">
+    <h3>Step 2: Financial Inventory (FI) — Data Capture</h3>
+    <ul>
+        <li>📍 Confirm address</li>
+        <li>👤 Spouse/co-borrower on loan?</li>
+        <li>💰 Current mortgage balance?</li>
+        <li>📅 Years left on loan?</li>
+        <li>❤️ Major health conditions?</li>
+        <li>🚬 Tobacco use?</li>
+        <li>🎂 Date of birth?</li>
+    </ul>
+    <p style="font-size: 10pt; color: #666;">Keep it conversational. You're filling a file, not interrogating.</p>
+</div>
+
+<div class="module">
+    <h3>Step 3: Book The Appointment</h3>
+    <div class="script-box">
+        "Alright [NAME] — we're going to get you scheduled with Keith Garfinkel, our Senior Underwriter. Would [TIME 1] or [TIME 2] work better for you?"
     </div>
-
-    <div class="block green">
-        <div class="block-label">No-Show Recovery</div>
-        <div class="script-line">"Hi <span class="fill">[NAME]</span> — we missed each other on your appointment today. Keith still has your file open with options pulled. Are you available right now or later today/tomorrow morning?"</div>
+    <div class="warning-box">
+        Give exactly TWO options. Never open-ended.
     </div>
-
-    <!-- LIVE TRANSFER -->
-    <div class="section-title">📡 Live Transfer Protocol</div>
-
-    <div class="block">
-        <div class="block-label">Pre-Transfer Warning (CRITICAL — NO HOLD MUSIC DROPS)</div>
-        <div class="script-line"><span class="hard">ALWAYS say this FIRST:</span></div>
-        <div class="script-line">"I'm going to transfer you to Keith right now. Give me about 15 seconds to connect the line. You are going to hear some brief hold music — <span class="hard">please bear with me and do not hang up.</span>"</div>
-        <hr class="divider">
-        <div class="script-line soft">📍 Discord Ping: "Who is ready?" — Martin, Austin, or Keith picks up.</div>
-        <div class="script-line soft">📍 Intro: Zach introduces lead → Keith confirms</div>
-        <div class="script-line soft">📍 Exit: Click "Leave Call" (never "End Call")</div>
+    <div class="script-box">
+        "Is your [husband/wife] going to be part of this decision? Perfect. Keith requires both of you on the line. What time today or tomorrow are you both home together?"
     </div>
+</div>
 
-    <!-- REBUTTAL SCRIPTS -->
-    <div class="section-title">🔥 Objection Rebuttals</div>
-
-    <div class="block">
-        <div class="block-label">"I Already Have It / Not Interested"</div>
-        <div class="script-line"><span class="hard">IMMEDIATELY ask:</span> "Which carrier?"</div>
-        <hr class="divider">
-        <div class="script-line">🔴 <span class="hard">Whole Life?</span> "Is it because you have health issues? Whole life is the most expensive — we may save you money with the 2026 rates."</div>
-        <div class="script-line">🟡 <span class="hard">IUL/Universal?</span> "I know for a fact our Senior Underwriter can save you money. Your file is flagged as incomplete — <span class="hard">that's why we're calling.</span>"</div>
-        <div class="script-line">🟤 <span class="hard">Refuses to say?</span> "<span class="hard">This IS my business.</span> You mailed in a request for help. Which carrier?"</div>
+<div class="module">
+    <h3>Step 3b: The Ghost Analogy (Deepen The Why)</h3>
+    <div class="script-box">
+        "Let's say you passed away yesterday, and I'm talking to your ghost right now. We are looking at this from the outside in. What is your [wife/husband] doing for money to pay the mortgage today?"
     </div>
+    <p style="font-size: 10pt; color: #666;">Use when they're soft on urgency. Hit the real fear.</p>
+</div>
 
-    <div class="block amber">
-        <div class="block-label">"You Guys Keep Calling Me"</div>
-        <div class="script-line">"Look, calm down. Those other guys are vultures who bought your data. <span class="hard">I have the physical card YOU mailed in right here on my desk.</span> Give me 5 minutes and I'll make sure we never call you again."</div>
+<div class="module">
+    <h3>Step 4: Security Code (DO NOT SKIP)</h3>
+    <div class="script-box">
+        "Alright — please grab something to write with real quick. I need to give you your security code for the call."
     </div>
-
-    <div class="block green">
-        <div class="block-label">"I'm Busy / Call Me Later"</div>
-        <div class="script-line">"Exactly why I'm calling — I'm not trying to do this whole thing right now. I just need to book you 10 minutes with Keith. What time today or tomorrow?"</div>
+    <div class="warning-box">
+        PAUSE. Wait until they confirm pen in hand. If they won't write — they won't show.
     </div>
-
-    <div class="block">
-        <div class="block-label">"My Lender Said I Don't Need This"</div>
-        <div class="script-line">"Yup — and they're right. <span class="hard">THEY</span> don't need you to have it. It only helps <span class="hard">YOU.</span>"</div>
+    <div class="script-box">
+        "Your security code is [LAST 4 OF KEITH'S #]. Write down Keith Garfinkel — G-A-R-F-I-N-K-E-L — and [DAY] at [TIME]. Read that back to me."
     </div>
-
-    <div class="block amber">
-        <div class="block-label">"I Never Filled Anything Out"</div>
-        <div class="script-line">"No worries — I don't remember what I had for breakfast either! This is just the coverage that pays off your home if you get sick. Would today or tomorrow work better?"</div>
+    <div class="script-box">
+        "We'll be calling you on this number ending in [LAST 4], correct? Do you get texts on this line? Perfect. Set an alarm right now — Keith is blocking that slot specifically for your family."
     </div>
+</div>
 
-    <div class="block green">
-        <div class="block-label">"Bad Health / Can't Qualify"</div>
-        <div class="script-line">"Really? Is your heart beating? <span class="soft">(lightheartedly)</span> No worries — we can for sure get you covered."</div>
+<div class="module">
+    <h3>Step 5: Courtesy Close (Lock Show)</h3>
+    <div class="script-box">
+        "Keith is currently helping hundreds of families. If an absolute emergency comes up, please be courteous and text this number immediately so we can give your slot to another family who is waiting. Fair enough?"
     </div>
-
-    <div class="block">
-        <div class="block-label">"Suspected Spam" Concern</div>
-        <div class="script-line">"I can send you Keith's state license and official ID right now to verify he's the firm owner. Everything is 100% legit."</div>
+    <div class="script-box">
+        "Perfect. Keith will talk to you [DAY] at [TIME]. Have a great day!"
     </div>
-
-    <!-- THE GATE QUESTION -->
-    <div class="section-title">⚡ The Gate Question</div>
-
-    <div class="block">
-        <div class="block-label">Ask BEFORE Setting Appointment (LOCK-IN QUALIFIER)</div>
-        <div class="script-line">"<span class="hard">Pricing requirements changed recently. A lot of coverage bought in the last two years can be replaced for much cheaper today. If Keith can save you a significant amount of money every month while keeping your family fully protected, will you take 5 minutes to speak to him tomorrow?</span>"</div>
-        <hr class="divider">
-        <div class="pill">If NO → Guaranteed no-show. Mark and move on.</div>
-        <div class="pill green">If YES → Continue to FI. You have them.</div>
+    <div class="info-box">
+        Calendar tag: Add "---" before title. SMS only from verified #880. A2P Compliance = non-negotiable.
     </div>
+</div>
 
-    <div class="footer-bar">
-        <strong>GARFINKEL FIRM</strong> · SALES SCRIPTS · CONFIDENTIAL<br>
-        Memorize these. Execute with aggression. No exceptions.
+<!-- VOICEMAIL DROPS -->
+<h2>SECTION 2 — VOICEMAIL DROPS & SMS MESSAGING</h2>
+
+<div class="module">
+    <h3>VM #1 — Standard (Initial Call)</h3>
+    <div class="script-box">
+        "Hi, this is Zach calling from Keith Garfinkel's office regarding the digital mortgage protection request you submitted. Keith is the senior manager assigned to your file, and we just need a quick 5 minutes to verify your info so he can get your options over to you. I'm going to shoot you a text, please reply so we can get your file handled."
     </div>
+</div>
 
+<div class="module">
+    <h3>VM #2 — On Other Line</h3>
+    <div class="script-box">
+        "Hi, this is Zach with Keith Garfinkel's office. I am currently wrapping up with another family on my other line, but your file is next on my desk. I will be calling you right back from this exact number in just a few minutes. Please keep your phone nearby."
+    </div>
+</div>
+
+<div class="module">
+    <h3>SMS — Scarcity / Month-End</h3>
+    <div class="script-box">
+        "Keith is closing out all [MONTH]-end files in the next 48 hours. If we don't hear back, we'll have to mark your request inactive and you'll lose these options."
+    </div>
+</div>
+
+<!-- OBJECTIONS -->
+<h2>SECTION 3 — OBJECTION KILL SHEET</h2>
+
+<div class="module">
+    <h3>Objection: "I Already Have It Taken Care Of"</h3>
+    <div class="objection-row">
+        <div class="obj-trigger">TRIGGER</div>
+        <div class="obj-rebuttal">"Perfect — which coverage did you go with?" [Ask immediately, shut up. Don't explain.]</div>
+    </div>
+    <div class="objection-row">
+        <div class="obj-trigger">WHOLE LIFE?</div>
+        <div class="obj-rebuttal">"Is it because you have health issues? Because whole life is the most expensive product — our Senior Underwriter may be able to get you the same coverage for less with the 2026 rates."</div>
+    </div>
+    <div class="objection-row">
+        <div class="obj-trigger">UNIVERSAL/IUL?</div>
+        <div class="obj-rebuttal">"Which company?" → [They answer] → "I know for a fact our Senior Underwriter can save you money. Your file is flagged and still marked incomplete — the guy who wrote your policy left this file incomplete. Every carrier is independent. If they don't mark it in our system, we do not know what you have. That is why we're calling."</div>
+    </div>
+    <div class="objection-row">
+        <div class="obj-trigger">"NOT YOUR BUSINESS"</div>
+        <div class="obj-rebuttal">"This IS my business. This is what I do for a living. You mailed in a request for help and I need to make sure you've been helped. My system is flagging your file. Which carrier?"</div>
+    </div>
+    <div class="objection-row">
+        <div class="obj-trigger">CIRCLE BACK</div>
+        <div class="obj-rebuttal">"The reason we're calling is 'cause you filled out a card, mailed it into us, requesting help. We need to make sure that you have been helped, right? We need to make sure we're doing our job here."</div>
+    </div>
+</div>
+
+<div class="module">
+    <h3>Objection: "I'm Not Interested"</h3>
+    <div class="objection-row">
+        <div class="obj-trigger">ATTACK</div>
+        <div class="obj-rebuttal">"Perfect — that's why I'm calling. I'm not wasting your time either, I just need to go over this... [continue with gate question]"</div>
+    </div>
+</div>
+
+<div class="module">
+    <h3>Objection: "I'm Busy / Call Me Later"</h3>
+    <div class="objection-row">
+        <div class="obj-trigger">IMMEDIATE</div>
+        <div class="obj-rebuttal">"Exactly why I'm calling — I'm not trying to do this whole thing right now. I just need to book you 10 minutes with Keith. What time today or tomorrow?"</div>
+    </div>
+</div>
+
+<div class="module">
+    <h3>Objection: "You Guys Keep Calling Me"</h3>
+    <div class="objection-row">
+        <div class="obj-trigger">SHARK MODE</div>
+        <div class="obj-rebuttal">"Look, calm down. Those other guys are vultures who bought your data. I have the physical card YOU mailed in right here on my desk. Give me 5 minutes and I'll make sure we never call you again."</div>
+    </div>
+</div>
+
+<div class="module">
+    <h3>Objection: "My Lender Said I Don't Need This"</h3>
+    <div class="objection-row">
+        <div class="obj-trigger">REFRAME</div>
+        <div class="obj-rebuttal">"Yup — and they're right. THEY don't need you to have it. It only helps YOU, not them."</div>
+    </div>
+</div>
+
+<div class="module">
+    <h3>Objection: "I Never Filled Anything Out"</h3>
+    <div class="objection-row">
+        <div class="obj-trigger">LIGHTEN IT</div>
+        <div class="obj-rebuttal">"No worries — I don't remember what I had for breakfast either! This is just the coverage that pays off your home if you get sick. Would today or tomorrow work?"</div>
+    </div>
+</div>
+
+<div class="module">
+    <h3>Objection: "Bad Health / Can't Qualify"</h3>
+    <div class="objection-row">
+        <div class="obj-trigger">AGGRESSIVE</div>
+        <div class="obj-rebuttal">"Really? Let me ask — is your heart beating? [lightheartedly] No worries, we can for sure get you covered."</div>
+    </div>
+</div>
+
+<div class="module">
+    <h3>Objection: "Suspected Spam" Concern</h3>
+    <div class="objection-row">
+        <div class="obj-trigger">BUILD TRUST</div>
+        <div class="obj-rebuttal">"I can send you Keith's state license and ID right now to verify he's the firm owner. Everything is 100% legit."</div>
+    </div>
+</div>
+
+<!-- LIVE TRANSFER PROTOCOL -->
+<h2>SECTION 4 — LIVE TRANSFER PROTOCOL (Warm Transfers)</h2>
+
+<div class="module">
+    <h3>The Hold Music Warning (CRITICAL)</h3>
+    <div class="warning-box">
+        Leads are hanging up due to unexpected hold music during transfer. Set the stage FIRST, or drops continue.
+    </div>
+    <div class="script-box">
+        "I'm going to transfer you to Keith right now. Give me about 15 seconds to connect the line. You are going to hear some brief hold music — please bear with me and do not hang up."
+    </div>
+</div>
+
+<div class="module">
+    <h3>Discord Integration</h3>
+    <ul>
+        <li><strong>While on call with lead:</strong> Ping Discord: "Who is ready?"</li>
+        <li><strong>Response:</strong> Martin, Austin, or Keith picks up</li>
+        <li><strong>Intro:</strong> Zach introduces lead → Keith confirms → Zach clicks "Leave Call" (never "End Call")</li>
+    </ul>
+</div>
+
+<!-- NO-SHOW RECOVERY -->
+<h2>SECTION 5 — NO-SHOW RECOVERY (Live Call)</h2>
+
+<div class="module">
+    <div class="script-box">
+        "Hi [NAME], this is Zachary Dawson. We had a scheduled appointment today with Keith Garfinkel for your mortgage protection review and it looks like we missed each other — no worries."
+    </div>
+    <div class="script-box">
+        "Keith still has your file open with the options pulled. Are you available right now for the 10 minutes we need — or would later today or tomorrow morning work better?"
+    </div>
+    <div class="warning-box">
+        Once rebooked: Run security code AGAIN. Force them to set alarm on spot. No exceptions.
+    </div>
+</div>
+
+<!-- CORE RULES -->
+<h2>SECTION 6 — THE RULES (NON-NEGOTIABLE)</h2>
+
+<div class="module">
+    <ul>
+        <li><strong>You are selling the 10-minute call. Nothing else.</strong></li>
+        <li><strong>Security code = non-negotiable.</strong> If they won't write, they won't show.</li>
+        <li><strong>Always ask: "Today or tomorrow?"</strong> Never open-ended.</li>
+        <li><strong>As soon as they engage, switch to shark.</strong> No slow talk. Jump on 'em.</li>
+        <li><strong>Circle back to full circle.</strong> "You mailed card requesting help. We make sure you've been helped."</li>
+        <li><strong>Force spouse on line upfront.</strong> Prevents "I need to talk to my wife" excuse.</li>
+        <li><strong>Calendar tag: Add "---" before title</strong> so Keith knows Zach booked it.</li>
+        <li><strong>SMS only from verified #880.</strong> A2P Compliance = non-negotiable.</li>
+        <li><strong>Keith needs 5 presentations/day minimum.</strong> Feed the pipeline. Always.</li>
+    </ul>
+</div>
+
+</div>
+
+<div class="footer">
+    <strong>GARFINKEL FIRM</strong> · SCRIPTS & AGED LEADS · CONFIDENTIAL<br>
+    Memorize. Execute. No deviations. Feed the pipeline.
 </div>
 
 </body>
