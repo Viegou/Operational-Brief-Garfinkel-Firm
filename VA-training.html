@@ -3,358 +3,316 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VA Training — Keith Garfinkel</title>
+    <title>Training & Product Knowledge</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;700&display=swap');
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --black: #0a0a0a;
-            --red: #D72B2B;
-            --amber: #E8A020;
-            --green: #1A8A4A;
-            --white: #F5F2EC;
-            --gray: #2a2a2a;
-            --light-gray: #3d3d3d;
-            --muted: #888;
-            --darker-gray: #1a1a1a;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            background: var(--darker-gray);
-            color: var(--white);
-            font-family: 'DM Sans', sans-serif;
-            font-size: 11px;
-            line-height: 1.5;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #1a1a1a;
+            line-height: 1.6;
+            background: #fff;
+            font-size: 11pt;
         }
-
-        .container {
-            max-width: 900px;
-            margin: 20px auto;
-            background: var(--black);
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
-            padding: 40px;
-        }
-
-        /* HEADER */
         .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            border-bottom: 3px solid var(--red);
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-            gap: 20px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+            color: #fff;
+            padding: 30px 40px;
+            margin-bottom: 25px;
+            border-left: 6px solid #f59e0b;
         }
-
-        nav {
-            display: flex;
-            gap: 20px;
-            font-family: 'DM Mono', monospace;
-            font-size: 10px;
-            width: 100%;
-            padding-bottom: 10px;
-            border-bottom: 1px solid rgba(248, 160, 32, 0.3);
-            margin-bottom: 15px;
+        .header h1 {
+            margin: 0 0 6px 0;
+            font-size: 24pt;
+            font-weight: 800;
+            letter-spacing: -0.5px;
         }
-
-        nav a {
-            color: #F5F2EC;
-            text-decoration: none;
-            letter-spacing: 0.5px;
-        }
-
-        nav a:nth-child(4) {
-            color: var(--amber);
-            font-weight: 600;
-        }
-
-        .header-left h1 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 36px;
-            letter-spacing: 2px;
-            line-height: 1;
-            margin-bottom: 4px;
-        }
-
-        .header-left h1 span {
-            color: var(--red);
-        }
-
-        .header-left p {
-            font-family: 'DM Mono', monospace;
-            font-size: 9px;
-            color: var(--muted);
-            letter-spacing: 0.5px;
-        }
-
-        .section-title {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 16px;
-            letter-spacing: 2px;
-            color: var(--red);
-            margin-top: 30px;
-            margin-bottom: 15px;
+        .header .subtitle {
+            font-size: 10pt;
+            opacity: 0.85;
             text-transform: uppercase;
-            border-bottom: 2px solid var(--light-gray);
-            padding-bottom: 8px;
+            letter-spacing: 2px;
         }
-
-        .block {
-            background: var(--gray);
-            border-left: 4px solid var(--red);
-            padding: 12px 14px;
-            border-radius: 2px;
-            margin-bottom: 12px;
+        .container { padding: 0 40px 40px 40px; }
+        h2 {
+            background: #0f172a;
+            color: #fff;
+            padding: 10px 16px;
+            font-size: 13pt;
+            margin: 30px 0 15px 0;
+            border-left: 5px solid #f59e0b;
         }
-
-        .block.amber {
-            border-left-color: var(--amber);
+        h3 {
+            color: #1e3a8a;
+            font-size: 12pt;
+            margin: 20px 0 8px 0;
+            border-bottom: 1px solid #cbd5e1;
+            padding-bottom: 4px;
         }
-
-        .block.green {
-            border-left-color: var(--green);
+        .module {
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            padding: 16px;
+            margin: 15px 0;
+            border-radius: 3px;
         }
-
-        .block-label {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 11px;
-            letter-spacing: 1.5px;
-            color: var(--muted);
-            margin-bottom: 8px;
-            text-transform: uppercase;
+        .info-box {
+            background: #dbeafe;
+            border-left: 4px solid #2563eb;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 3px;
         }
-
-        .key-line {
-            font-family: 'DM Mono', monospace;
-            font-size: 10px;
-            color: var(--white);
-            line-height: 1.6;
-            margin-bottom: 6px;
-            padding: 6px 8px;
-            background: var(--light-gray);
-            border-radius: 2px;
+        .green-box {
+            background: #dcfce7;
+            border-left: 4px solid #16a34a;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 3px;
         }
-
-        .key-line strong {
-            color: var(--amber);
+        .warning-box {
+            background: #fee2e2;
+            border-left: 4px solid #dc2626;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 3px;
         }
-
-        .list-item {
-            font-family: 'DM Mono', monospace;
-            font-size: 10px;
-            color: var(--white);
-            line-height: 1.6;
-            margin-bottom: 8px;
-            padding-left: 16px;
-            position: relative;
-        }
-
-        .list-item::before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: var(--amber);
-            font-weight: 600;
-        }
-
-        .pill {
-            display: inline-block;
-            background: var(--red);
-            color: var(--white);
-            font-size: 8px;
-            font-family: 'DM Mono', monospace;
-            padding: 3px 7px;
-            border-radius: 2px;
-            margin-bottom: 8px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            margin-right: 6px;
-        }
-
-        .pill.amber {
-            background: var(--amber);
-            color: var(--black);
-        }
-
-        .pill.green {
-            background: var(--green);
-            color: var(--white);
-        }
-
         table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 9px;
-            font-family: 'DM Mono', monospace;
-            margin: 12px 0;
+            margin: 10px 0;
+            font-size: 10pt;
         }
-
-        table th {
-            background: var(--light-gray);
-            border: 1px solid var(--muted);
-            padding: 6px;
+        th {
+            background: #1e3a8a;
+            color: #fff;
+            padding: 8px;
             text-align: left;
-            font-weight: 600;
-            color: var(--amber);
+            font-weight: 700;
         }
-
-        table td {
-            border: 1px solid var(--light-gray);
-            padding: 6px;
-            line-height: 1.4;
+        td {
+            padding: 8px;
+            border-bottom: 1px solid #cbd5e1;
         }
-
-        table tr:nth-child(even) td {
-            background: rgba(255, 255, 255, 0.02);
+        tr:nth-child(even) td { background: #f8fafc; }
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            font-size: 9pt;
+            font-weight: 700;
+            border-radius: 3px;
+            color: #fff;
         }
-
-        .footer-bar {
-            border-top: 2px solid var(--light-gray);
-            padding-top: 12px;
-            margin-top: 30px;
-            font-family: 'DM Mono', monospace;
-            font-size: 9px;
-            color: var(--muted);
+        .badge-best { background: #16a34a; }
+        .badge-good { background: #2563eb; }
+        .badge-bad { background: #dc2626; }
+        ul { margin: 10px 0; padding-left: 20px; }
+        li { margin-bottom: 6px; }
+        .footer {
+            margin-top: 40px;
+            padding: 18px 40px;
+            background: #0f172a;
+            color: #94a3b8;
+            font-size: 9pt;
             text-align: center;
+            border-top: 4px solid #f59e0b;
         }
-
-        .footer-bar strong {
-            color: var(--amber);
-        }
+        .footer strong { color: #f59e0b; }
     </style>
 </head>
 <body>
 
+<div class="header">
+    <div class="subtitle">Garfinkel Mortgage Protection & Life Insurance</div>
+    <h1>Training & Product Knowledge</h1>
+    <div class="subtitle" style="margin-top:8px;">Carrier Hierarchy · IUL vs Whole Life · Key Concepts</div>
+</div>
+
 <div class="container">
 
-    <div class="header">
-        <nav>
-            <a href="index.html">HOME</a>
-            <a href="MP-Aged-Script-Keith-Garfinkel.html">AGED SCRIPT</a>
-            <a href="scripts.html">SCRIPTS</a>
-            <a href="training.html">TRAINING</a>
-            <a href="case-studies.html">CASE STUDIES</a>
-        </nav>
-        <div class="header-left">
-            <h1>VA <span>TRAINING</span></h1>
-            <p>Keith Garfinkel — Product Knowledge + Lead Qualification</p>
-        </div>
+<!-- PRODUCT BASICS -->
+<h2>SECTION 1 — PRODUCT BASICS (Memorize This)</h2>
+
+<div class="module">
+    <h3>IUL — Index Universal Life (Premium Product)</h3>
+    <div class="green-box">
+        <strong>✓ Market-tied</strong> (7-8% growth potential)<br>
+        <strong>✓ Living Benefits</strong> (pays out if you get heart attack/stroke/cancer while alive)<br>
+        <strong>✓ Best for:</strong> Healthy clients who want growth + protection<br>
+        <strong>✓ Example:</strong> ~$50/month for $10k coverage on 70-year-old
     </div>
+</div>
 
-    <!-- PRODUCT KNOWLEDGE -->
-    <div class="section-title">📚 Core Product Knowledge</div>
-
-    <div class="block green">
-        <div class="block-label">IUL — Index Universal Life (Premium Product)</div>
-        <div class="key-line"><strong>Growth:</strong> 7-8% tied to the market</div>
-        <div class="key-line"><strong>Living Benefits:</strong> Pays out if you have heart attack, stroke, or critical illness WHILE ALIVE</div>
-        <div class="key-line"><strong>Best For:</strong> Healthy clients</div>
-        <div class="key-line"><strong>Top Carriers:</strong> Mutual of Omaha, Foresters, Transamerica</div>
+<div class="module">
+    <h3>Whole Life (For Sick Clients)</h3>
+    <div class="warning-box">
+        <strong>📌 Fixed 3% growth</strong> (no market upside)<br>
+        <strong>📌 More expensive</strong> than IUL<br>
+        <strong>📌 Death only</strong> (no living benefits)<br>
+        <strong>📌 Best for:</strong> Sick/unhealthy people who can't qualify for IUL<br>
+        <strong>📌 Example:</strong> ~$100/month for $10k coverage on 70-year-old
     </div>
+</div>
 
-    <div class="block amber">
-        <div class="block-label">Whole Life (For Sick Clients)</div>
-        <div class="key-line"><strong>Growth:</strong> Fixed 3%</div>
-        <div class="key-line"><strong>Living Benefits:</strong> None</div>
-        <div class="key-line"><strong>Best For:</strong> Sick/unhealthy people who can't qualify for IUL</div>
-        <div class="key-line"><strong>Cost:</strong> Expensive (~$100/mo for $10k coverage)</div>
-        <div class="key-line"><strong>Top Carriers:</strong> Mutual of Omaha, Foresters, American Home Life</div>
+<div class="module">
+    <h3>PMI vs. Mortgage Protection — KEY DIFFERENCE</h3>
+    <div class="info-box">
+        <strong>PMI (Private Mortgage Insurance):</strong> Protects the BANK if you default<br><br>
+        <strong>Mortgage Protection:</strong> Protects YOUR FAMILY. Pays off the house if you die or get critically ill.<br><br>
+        <em>Most people don't know this difference. Use it as a sales hammer.</em>
     </div>
+</div>
 
-    <div class="block">
-        <div class="block-label">PMI vs. Mortgage Protection (CRITICAL DIFFERENCE)</div>
-        <table>
-            <tr>
-                <th>PMI</th>
-                <th>Mortgage Protection (What We Sell)</th>
-            </tr>
-            <tr>
-                <td>Protects the <strong>BANK</strong> if you default</td>
-                <td>Protects your <strong>FAMILY</strong> if you die or get critically ill</td>
-            </tr>
-            <tr>
-                <td>Paid TO the bank when you die</td>
-                <td>Paid TO your family to pay off the house</td>
-            </tr>
-        </table>
+<!-- CARRIER HIERARCHY -->
+<h2>SECTION 2 — CARRIER HIERARCHY (The Ammo)</h2>
+
+<div class="module">
+    <h3>IUL — Healthy Clients (Cheapest & Best)</h3>
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Carrier</th>
+            <th>Notes</th>
+        </tr>
+        <tr>
+            <td><strong>1</strong></td>
+            <td><strong>Mutual of Omaha</strong> <span class="badge badge-best">BEST</span></td>
+            <td>Cheapest rates. Living benefits. Accelerated underwriting up to $400k (no health exam). Example: ~$50/mo for $10k@70yo.</td>
+        </tr>
+        <tr>
+            <td><strong>2</strong></td>
+            <td><strong>Foresters</strong> <span class="badge badge-good">2ND</span></td>
+            <td>Accelerated underwriting up to $300k.</td>
+        </tr>
+        <tr>
+            <td><strong>3</strong></td>
+            <td><strong>Transamerica</strong> <span class="badge badge-good">3RD</span></td>
+            <td>Highly competitive. Uncapped IUL (unlimited earning potential).</td>
+        </tr>
+    </table>
+</div>
+
+<div class="module">
+    <h3>Whole Life — Sick Clients (Expensive)</h3>
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Carrier</th>
+            <th>Notes</th>
+        </tr>
+        <tr>
+            <td><strong>1</strong></td>
+            <td><strong>Mutual of Omaha</strong> <span class="badge badge-best">BEST</span></td>
+            <td>Still the top option. Example: ~$100/mo for $10k coverage.</td>
+        </tr>
+        <tr>
+            <td><strong>2</strong></td>
+            <td><strong>Foresters</strong></td>
+            <td>Second choice.</td>
+        </tr>
+        <tr>
+            <td><strong>3</strong></td>
+            <td><strong>American Home Life</strong></td>
+            <td>Third choice.</td>
+        </tr>
+        <tr>
+            <td><strong>4</strong></td>
+            <td><strong>Transamerica</strong></td>
+            <td>Highly expensive for WL. Example: ~$200/mo for $10k coverage.</td>
+        </tr>
+        <tr>
+            <td><strong>5</strong></td>
+            <td><strong>Ethos</strong></td>
+            <td>Comparable to Transamerica. Very expensive. Strictly for severe health only (heart attack, stroke, cancer).</td>
+        </tr>
+    </table>
+</div>
+
+<div class="module">
+    <h3>The "Trash / Overpriced" Carriers — ATTACK These</h3>
+    <table>
+        <tr>
+            <th>Carrier</th>
+            <th>Why It's Trash</th>
+        </tr>
+        <tr>
+            <td><strong>American Amicable</strong> <span class="badge badge-bad">ATTACK</span></td>
+            <td>Policies designed to lapse after 10 years to artificially lower monthly payment. Script: "Junior agent set you up with minimum policy that will lapse. Let Keith review."</td>
+        </tr>
+        <tr>
+            <td><strong>Americo</strong> <span class="badge badge-bad">ATTACK</span></td>
+            <td>Massively overpriced. Keith destroys their rates.</td>
+        </tr>
+    </table>
+</div>
+
+<!-- KEY CONCEPTS -->
+<h2>SECTION 3 — KEY CONCEPTS & PIVOTS</h2>
+
+<div class="module">
+    <h3>The "Incomplete File / Junior Agent" Pivot</h3>
+    <p><strong>When they say:</strong> "I already have a policy with [Carrier]."</p>
+    <p style="margin-top: 8px;"><strong>Response:</strong> "That's exactly why I'm calling. You likely spoke to a junior agent, and your file is sitting on my desk as incomplete. Keith is the Senior Underwriter. He just needs 5 minutes to verify they didn't overcharge you based on the new 2026 rates."</p>
+</div>
+
+<div class="module">
+    <h3>The "Ghost" Analogy (Deepening the Why)</h3>
+    <p><strong>Script:</strong> "Let's say you passed away yesterday, and I'm talking to your ghost right now. We are looking at this from the outside in. What is your wife doing for money to pay the mortgage today?"</p>
+    <p style="margin-top: 8px; font-size: 10pt; color: #666;"><em>Use when they're soft on urgency. This hits real fear.</em></p>
+</div>
+
+<div class="module">
+    <h3>The "Think About It" Metric (Price Problem)</h3>
+    <div class="info-box">
+        If Keith builds the emotional "Why" and the lead still says <em>"I need to think about it,"</em> it means <strong>the quoted price was too high.</strong>
     </div>
+</div>
 
-    <!-- LEAD QUALIFICATION -->
-    <div class="section-title">🎯 Lead Qualification Checklist</div>
+<!-- HEALTH UNDERWRITING -->
+<h2>SECTION 4 — HEALTH UNDERWRITING QUICK GUIDE</h2>
 
-    <div class="block">
-        <div class="block-label">Must-Ask Questions (In Order)</div>
-        <div class="list-item"><strong>Question 1:</strong> "Do you currently have any life or mortgage protection?"</div>
-        <div class="list-item" style="padding-left: 32px; font-style: italic;">If yes → get carrier and monthly payment.</div>
-        <div class="list-item"><strong>Question 2:</strong> "Are you the decision-maker, or does someone else (spouse, etc.) need to be on the line?"</div>
-        <div class="list-item" style="padding-left: 32px; font-style: italic;">If spouse needed → GET THEM ON NOW. Don't accept callbacks.</div>
-        <div class="list-item"><strong>Question 3:</strong> "What's the approximate mortgage balance on your home?"</div>
-        <div class="list-item" style="padding-left: 32px; font-style: italic;">They need at least $200k coverage.</div>
-        <div class="list-item"><strong>Question 4:</strong> "Do you have any major health issues we should know about?"</div>
-        <div class="list-item" style="padding-left: 32px; font-style: italic;">This tells you IUL vs. Whole Life.</div>
-    </div>
+<div class="module">
+    <h3>Red Flags That Force Whole Life</h3>
+    <ul>
+        <li>Heart disease / heart attack history</li>
+        <li>Stroke history</li>
+        <li>Cancer (any type)</li>
+        <li>Diabetes (Type 1 or poorly controlled Type 2)</li>
+        <li>Kidney/liver disease</li>
+        <li>Heavy tobacco use</li>
+        <li>Poor credit / financial instability</li>
+    </ul>
+</div>
 
-    <!-- THE GHOST ANALOGY -->
-    <div class="section-title">👻 The Ghost Analogy (Deepening the Why)</div>
+<div class="module">
+    <h3>Green Lights For IUL</h3>
+    <ul>
+        <li>No major health issues</li>
+        <li>Non-smoker</li>
+        <li>Good credit / stable finances</li>
+        <li>Under 75 years old (generally)</li>
+    </ul>
+</div>
 
-    <div class="block">
-        <div class="block-label">DEEPENING EMOTIONAL DISCOVERY</div>
-        <div class="key-line">"Let's say you passed away yesterday, and I'm talking to your ghost right now. We are looking at this from the outside in. What is your wife doing for money to pay the mortgage today?"</div>
-        <div class="key-line" style="margin-top: 8px; font-style: italic; background: rgba(215, 43, 43, 0.2);">This is NOT a close. This is forcing them to visualize the nightmare so Keith can build the closing later.</div>
-    </div>
+<!-- KEY RULES -->
+<h2>SECTION 5 — TRAINING RULES (Non-Negotiable)</h2>
 
-    <!-- APPOINTMENT BOOKING -->
-    <div class="section-title">📅 Appointment Booking Rules</div>
+<div class="module">
+    <ul>
+        <li><strong>Security code = lock-in mechanism.</strong> If they won't write, they won't show.</li>
+        <li><strong>Spouse on the call = upfront mandatory.</strong> Prevents delays.</li>
+        <li><strong>"Today or tomorrow?"</strong> — always two options. Never open-ended.</li>
+        <li><strong>PMI ≠ Mortgage Protection.</strong> Use this knowledge as a hammer.</li>
+        <li><strong>American Amicable = attack immediately.</strong> It's a lapse trap.</li>
+        <li><strong>Keith needs 5 presentations/day minimum.</strong> You are the feeder. Feed.</li>
+        <li><strong>Calendar tags: "---" before the title.</strong> Keith knows Zach booked it.</li>
+    </ul>
+</div>
 
-    <div class="block">
-        <div class="block-label">The Security Code (NO-SHOW KILLER)</div>
-        <div class="pill">DO NOT SKIP</div>
-        <div class="key-line"><span class="hard">If they won't grab a pen and write it down, they WILL NOT SHOW UP.</span></div>
-        <div class="key-line">Script: "Grab a pen. Your security code is [LAST 4]. Read it back to me."</div>
-    </div>
+</div>
 
-    <div class="block green">
-        <div class="block-label">Best Times to Book</div>
-        <div class="list-item"><strong>🟢 Morning (7-9am):</strong> Before work. Most committed.</div>
-        <div class="list-item"><strong>🟡 Evening (5-7pm):</strong> After work. Good secondary.</div>
-        <div class="list-item"><strong>🔴 AVOID Lunch (12-1pm):</strong> Low show rates.</div>
-        <div class="list-item"><strong>🔴 AVOID Late (8pm+):</strong> Tired leads cancel last-minute.</div>
-    </div>
-
-    <div class="block amber">
-        <div class="block-label">Multi-Decision Makers (SPOUSE TIE-DOWN)</div>
-        <div class="pill amber">MANDATORY</div>
-        <div class="key-line"><strong>Get the spouse on the phone NOW.</strong> Do not accept "I'll ask my wife and call you back."</div>
-        <div class="key-line">Script: "Keith requires both of you on the line. What time today or tomorrow are you both home together?"</div>
-    </div>
-
-    <!-- FINANCIAL INVENTORY -->
-    <div class="section-title">💰 Financial Inventory (FI) — What to Capture</div>
-
-    <div class="block">
-        <div class="block-label">Capture These Fields (Keep it Conversational)</div>
-        <div class="key-line">📍 Full address (confirm)</div>
-        <div class="key-line">👤 Spouse/co-borrower on loan?</div>
-        <div class="key-line">💰 Current mortgage balance</div>
-        <div class="key-line">📅 Years left on loan</div>
-        <div class="key-line">❤️ Major health conditions</div>
-        <div class="key-line">🚬 Tobacco use</div>
-        <div class="key-line">🎂 Date of birth</div>
-        <div class="key-line" style="font-style: italic; background: rgba(232, 160, 32, 0.1);">Keep it conversational. You're filling a file, not interrogating.</div>
-    </div>
-
-    <div class="footer-bar">
-        <strong>GARFINKEL FIRM</strong> · VA TRAINING · CONFIDENTIAL<br>
-        Master these concepts. Ask questions. No shortcuts.
-    </div>
-
+<div class="footer">
+    <strong>GARFINKEL FIRM</strong> · TRAINING & PRODUCT KNOWLEDGE · CONFIDENTIAL<br>
+    Memorize. Master. Execute.
 </div>
 
 </body>
