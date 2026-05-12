@@ -74,6 +74,30 @@
             margin-bottom: 12px;
         }
 
+        nav {
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(248, 160, 32, 0.3);
+            display: flex;
+            gap: 20px;
+            font-family: 'DM Mono', monospace;
+            font-size: 10px;
+            width: 100%;
+        }
+
+        nav a {
+            color: #F5F2EC;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        nav a:first-child {
+            color: #E8A020;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
         .header-left h1 {
             font-family: 'Bebas Neue', sans-serif;
             font-size: 42px;
@@ -114,16 +138,8 @@
             overflow-y: auto;
         }
 
-        .grid.three-col {
-            grid-template-columns: 1fr 1fr 1fr;
-        }
-
         .col-full {
             grid-column: 1 / -1;
-        }
-
-        .col-2 {
-            grid-column: span 2;
         }
 
         /* BLOCKS */
@@ -143,10 +159,6 @@
 
         .block.amber {
             border-left-color: var(--amber);
-        }
-
-        .block.white-border {
-            border-left-color: var(--white);
         }
 
         .block-label {
@@ -334,16 +346,6 @@
             color: var(--amber);
         }
 
-        .section-title {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 14px;
-            letter-spacing: 2px;
-            color: var(--red);
-            margin-top: 8px;
-            margin-bottom: 6px;
-            text-transform: uppercase;
-        }
-
         .alert {
             background: rgba(215, 43, 43, 0.1);
             border-left: 3px solid var(--red);
@@ -352,11 +354,6 @@
             border-radius: 2px;
             font-size: 9.5px;
             line-height: 1.4;
-        }
-
-        .scrollable {
-            overflow-y: auto;
-            max-height: 100%;
         }
 
         @media print {
@@ -374,6 +371,14 @@
 <div class="pdf-container">
     <div class="page">
         <!-- HEADER -->
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="MP-Aged-Script-Keith-Garfinkel.html" style="color:#E8A020; font-weight:600;">AGED SCRIPT</a>
+            <a href="scripts.html">SCRIPTS</a>
+            <a href="training.html">TRAINING</a>
+            <a href="case-studies.html">CASE STUDIES</a>
+        </nav>
+
         <div class="header">
             <div class="header-left">
                 <h1>MP AGED <span>SCRIPT</span></h1>
@@ -452,7 +457,7 @@
         </div>
 
         <!-- STEP 2: FI -->
-        <div class="block white-border">
+        <div class="block">
             <div class="block-label">
                 <span class="step-num">2</span>
                 <span>FINANCIAL INVENTORY (FI)</span>
@@ -560,7 +565,7 @@
         </div>
 
         <!-- OBJECTIONS -->
-        <div class="block col-full red">
+        <div class="block col-full">
             <div class="block-label">
                 <span>🔥 OBJECTION KILL SHEET</span>
                 <span class="badge">NEVER FREEZE</span>
@@ -604,7 +609,7 @@
             <div class="objection-row">
                 <div class="obj-trigger">"Bad health / can't qualify"</div>
                 <div class="obj-rebuttal">
-                    "Really? Let me ask — is your heart beating? <span style="color: var(--amber);">[lightheartedly]</span> No worries, we can for sure get you covered."
+                    "Really? Is your heart beating? <span style="color: var(--amber);">[lightheartedly]</span> No worries, we can for sure get you covered."
                 </div>
             </div>
             <div class="objection-row">
@@ -657,7 +662,7 @@
         </div>
 
         <!-- PRODUCT CHEAT SHEET -->
-        <div class="block col-full white-border">
+        <div class="block col-full">
             <div class="block-label">
                 <span>📋 PRODUCT CHEAT SHEET</span>
             </div>
@@ -700,7 +705,7 @@
         </div>
 
         <!-- THE RULES -->
-        <div class="block col-full red">
+        <div class="block col-full">
             <div class="block-label">
                 <span>✅ THE RULES (NON-NEGOTIABLE)</span>
             </div>
