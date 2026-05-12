@@ -3,300 +3,363 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Studies — Keith Garfinkel</title>
+    <title>Case Studies & Real Closes</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;700&display=swap');
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --black: #0a0a0a;
-            --red: #D72B2B;
-            --amber: #E8A020;
-            --green: #1A8A4A;
-            --white: #F5F2EC;
-            --gray: #2a2a2a;
-            --light-gray: #3d3d3d;
-            --muted: #888;
-            --darker-gray: #1a1a1a;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            background: var(--darker-gray);
-            color: var(--white);
-            font-family: 'DM Sans', sans-serif;
-            font-size: 11px;
-            line-height: 1.5;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 20px auto;
-            background: var(--black);
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
-            padding: 40px;
-        }
-
-        /* HEADER */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            border-bottom: 3px solid var(--red);
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        nav {
-            display: flex;
-            gap: 20px;
-            font-family: 'DM Mono', monospace;
-            font-size: 10px;
-            width: 100%;
-            padding-bottom: 10px;
-            border-bottom: 1px solid rgba(248, 160, 32, 0.3);
-            margin-bottom: 15px;
-        }
-
-        nav a {
-            color: #F5F2EC;
-            text-decoration: none;
-            letter-spacing: 0.5px;
-        }
-
-        nav a:nth-child(5) {
-            color: var(--amber);
-            font-weight: 600;
-        }
-
-        .header-left h1 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 36px;
-            letter-spacing: 2px;
-            line-height: 1;
-            margin-bottom: 4px;
-        }
-
-        .header-left h1 span {
-            color: var(--red);
-        }
-
-        .header-left p {
-            font-family: 'DM Mono', monospace;
-            font-size: 9px;
-            color: var(--muted);
-            letter-spacing: 0.5px;
-        }
-
-        .section-title {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 16px;
-            letter-spacing: 2px;
-            color: var(--red);
-            margin-top: 30px;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            border-bottom: 2px solid var(--light-gray);
-            padding-bottom: 8px;
-        }
-
-        .case {
-            background: var(--gray);
-            border-left: 4px solid var(--amber);
-            padding: 15px;
-            border-radius: 2px;
-            margin-bottom: 15px;
-        }
-
-        .case-title {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 12px;
-            letter-spacing: 1px;
-            color: var(--amber);
-            margin-bottom: 8px;
-            text-transform: uppercase;
-        }
-
-        .case-subtitle {
-            font-family: 'DM Mono', monospace;
-            font-size: 9px;
-            color: var(--muted);
-            margin-bottom: 10px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid var(--light-gray);
-        }
-
-        .case-item {
-            font-family: 'DM Mono', monospace;
-            font-size: 10px;
-            color: var(--white);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #1a1a1a;
             line-height: 1.6;
-            margin-bottom: 6px;
+            background: #fff;
+            font-size: 11pt;
         }
-
-        .case-item strong {
-            color: var(--amber);
+        .header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+            color: #fff;
+            padding: 30px 40px;
+            margin-bottom: 25px;
+            border-left: 6px solid #f59e0b;
         }
-
-        .case-item .pivot {
-            color: var(--green);
-            font-weight: 600;
+        .header h1 {
+            margin: 0 0 6px 0;
+            font-size: 24pt;
+            font-weight: 800;
+            letter-spacing: -0.5px;
         }
-
-        .divider {
-            border: none;
-            border-top: 1px solid var(--light-gray);
-            margin: 10px 0;
+        .header .subtitle {
+            font-size: 10pt;
+            opacity: 0.85;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
-
-        .note {
-            font-family: 'DM Mono', monospace;
-            font-size: 9px;
-            color: var(--muted);
-            font-style: italic;
+        .container { padding: 0 40px 40px 40px; }
+        h2 {
+            background: #0f172a;
+            color: #fff;
+            padding: 10px 16px;
+            font-size: 13pt;
+            margin: 30px 0 15px 0;
+            border-left: 5px solid #f59e0b;
+        }
+        .case-study {
+            background: #f8fafc;
+            border: 2px solid #cbd5e1;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 3px;
+            border-left: 6px solid #1e3a8a;
+        }
+        .case-name {
+            font-size: 13pt;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+        .case-detail {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 12px;
+            margin-bottom: 10px;
+            font-size: 10pt;
+        }
+        .case-label {
+            font-weight: 700;
+            color: #1e3a8a;
+        }
+        .case-value {
+            color: #666;
+        }
+        .strategy-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 3px;
+        }
+        .strategy-box::before {
+            content: "🎯 STRATEGY: ";
+            font-weight: 800;
+            color: #b45309;
+        }
+        .result-box {
+            background: #dcfce7;
+            border-left: 4px solid #16a34a;
+            padding: 12px;
             margin-top: 8px;
-            padding: 8px;
-            background: rgba(232, 160, 32, 0.1);
-            border-radius: 2px;
+            border-radius: 3px;
         }
-
-        .footer-bar {
-            border-top: 2px solid var(--light-gray);
-            padding-top: 12px;
-            margin-top: 30px;
-            font-family: 'DM Mono', monospace;
-            font-size: 9px;
-            color: var(--muted);
+        .result-box::before {
+            content: "✓ RESULT: ";
+            font-weight: 800;
+            color: #166534;
+        }
+        .footer {
+            margin-top: 40px;
+            padding: 18px 40px;
+            background: #0f172a;
+            color: #94a3b8;
+            font-size: 9pt;
             text-align: center;
+            border-top: 4px solid #f59e0b;
         }
-
-        .footer-bar strong {
-            color: var(--amber);
-        }
+        .footer strong { color: #f59e0b; }
     </style>
 </head>
 <body>
 
+<div class="header">
+    <div class="subtitle">Garfinkel Mortgage Protection & Life Insurance</div>
+    <h1>Case Studies & Real Closes</h1>
+    <div class="subtitle" style="margin-top:8px;">Real Leads · Real Objections · Real Closures</div>
+</div>
+
 <div class="container">
 
-    <div class="header">
-        <nav>
-            <a href="index.html">HOME</a>
-            <a href="MP-Aged-Script-Keith-Garfinkel.html">AGED SCRIPT</a>
-            <a href="scripts.html">SCRIPTS</a>
-            <a href="training.html">TRAINING</a>
-            <a href="case-studies.html">CASE STUDIES</a>
-        </nav>
-        <div class="header-left">
-            <h1>CASE <span>STUDIES</span></h1>
-            <p>Keith Garfinkel — Real Leads, Real Pivots, Real Closes</p>
-        </div>
+<h2>CASE STUDY #1 — MINER (Consolidation Close)</h2>
+<div class="case-study">
+    <div class="case-name">Miner</div>
+    <div class="case-detail">
+        <div class="case-label">Health:</div>
+        <div class="case-value">Disabled, high-interest debt</div>
     </div>
-
-    <div class="section-title">Real Lead Profiles</div>
-
-    <!-- CASE 1 -->
-    <div class="case">
-        <div class="case-title">Case #1 — The Miner (Debt Consolidation Play)</div>
-        <div class="case-subtitle">Disabled, 6 whole-life policies, wife has Parkinson's</div>
-        <div class="case-item"><strong>Problem:</strong> Six whole-life policies = $500+/mo drain. Junior agents sold terrible coverage.</div>
-        <div class="case-item"><strong>Objection:</strong> Already has coverage. Too many payments.</div>
-        <hr class="divider">
-        <div class="case-item"><span class="pivot">Keith's Pivot:</span> Pitched as a Financial Advisor (leveraging his finance degree). Strategy: Consolidate existing policies, eliminate high-interest debt, and optimize for Living Benefits specifically for wife's health crisis.</div>
-        <div class="case-item"><span class="pivot">The Close:</span> Miner didn't buy another policy — he bought a debt consolidation + protection strategy. Felt heard.</div>
-        <div class="note">📌 Lesson: Sometimes you're not selling insurance. You're selling financial strategy.</div>
+    <div class="case-detail">
+        <div class="case-label">Spouse:</div>
+        <div class="case-value">Wife has Parkinson's disease</div>
     </div>
-
-    <!-- CASE 2 -->
-    <div class="case">
-        <div class="case-title">Case #2 — Josie Todd (Grandson Angle)</div>
-        <div class="case-subtitle">Talked in circles, complained about $80/mo, wanted coverage for 23-year-old grandson</div>
-        <div class="case-item"><strong>Problem:</strong> $165k owed on home, only $170k coverage. Grandson's whole-life policy was a ripoff ($40/mo for $10k).</div>
-        <div class="case-item"><strong>Objection:</strong> Too expensive. Not interested.</div>
-        <hr class="divider">
-        <div class="case-item"><span class="pivot">Keith's Pivot:</span> Ignored Josie's noise about her own payment. Focused on the grandson. Pitched an IUL for grandson at fraction of his current whole-life premium.</div>
-        <div class="case-item"><span class="pivot">The Close:</span> By solving for the grandson, Josie felt like a hero protecting family. Her own payment objection disappeared.</div>
-        <div class="note">📌 Lesson: Find the emotional trigger. Sometimes it's not about them — it's about who they love.</div>
+    <div class="case-detail">
+        <div class="case-label">Current:</div>
+        <div class="case-value">6 whole-life policies (overpriced)</div>
     </div>
-
-    <!-- CASE 3 -->
-    <div class="case">
-        <div class="case-title">Case #3 — Vanessa Lewis (The Angry Lead)</div>
-        <div class="case-subtitle">Rude, impatient, "I don't got time for this shit"</div>
-        <div class="case-item"><strong>Problem:</strong> Angry leads hang up on soft salespeople immediately.</div>
-        <div class="case-item"><strong>Instinct:</strong> Zach would have backed down. Keith stayed aggressively direct.</div>
-        <hr class="divider">
-        <div class="case-item"><span class="pivot">Keith's Response:</span> Zero apologies. No corporate speak. Just: "Vanessa, I get it — you're busy. I don't need 30 minutes. I need 5. If you have a mortgage, your wife deserves to know what happens if you die today. So let's keep it short."</div>
-        <div class="case-item"><span class="pivot">The Close:</span> <strong>She booked.</strong> Angry leads don't hate salespeople — they hate fake politeness. Keith's directness built trust.</div>
-        <div class="note">📌 Lesson: Never apologize unnecessarily. Match their energy. Straight-shooters respect straight-shooters.</div>
+    <div class="strategy-box">
+        Keith pitched himself as a <strong>Financial Advisor</strong> (finance degree), not just an insurance guy. Strategy: consolidate his 6 policies, kill the high-interest debt, and focus on <strong>Living Benefits</strong> to protect the family if wife's health deteriorates.
     </div>
-
-    <!-- CASE 4 -->
-    <div class="case">
-        <div class="case-title">Case #4 — Curtis Pleasant (The Paranoia Play)</div>
-        <div class="case-subtitle">Terrified of "Suspected Spam" tags, doesn't trust calls</div>
-        <div class="case-item"><strong>Problem:</strong> "How do I know you're real?"</div>
-        <hr class="divider">
-        <div class="case-item"><span class="pivot">Keith's Pivot:</span> Offered to text Keith's state license number and official ID photo to verify identity as firm owner.</div>
-        <div class="case-item"><span class="pivot">The Close:</span> Paranoia → Proof → Booking. Curtis felt validated.</div>
-        <div class="note">📌 Lesson: Use documentation as trust-building. Sometimes you need to prove you're not a scammer.</div>
+    <div class="result-box">
+        Closed. Consolidated 6 policies into 2 IULs with living benefits. Debt reduction plan implemented.
     </div>
+</div>
 
-    <!-- CASE 5 -->
-    <div class="case">
-        <div class="case-title">Case #5 — Rene Lopez (The Incomplete File)</div>
-        <div class="case-subtitle">Had Forrester's for a year, said he was all set</div>
-        <div class="case-item"><strong>Problem:</strong> "I already have coverage."</div>
-        <hr class="divider">
-        <div class="case-item"><span class="pivot">Zach's Pivot:</span> Used the "Junior Agent / Incomplete File" attack: "That's exactly why I'm calling. You likely spoke to a junior agent, and your file is sitting on my desk as incomplete. Keith is the Senior Underwriter. He just needs 5 minutes to verify they didn't overcharge you based on new 2026 rates."</div>
-        <div class="case-item"><span class="pivot">The Close:</span> Positioned as a REVIEW, not a replacement sale. Rene booked because he wanted to ensure he wasn't overpaying.</div>
-        <div class="note">📌 Lesson: "Incomplete file" is gold. Use it when they already have coverage.</div>
+<h2>CASE STUDY #2 — JOSIE TODD (Grandson Close)</h2>
+<div class="case-study">
+    <div class="case-name">Josie Todd</div>
+    <div class="case-detail">
+        <div class="case-label">Issue:</div>
+        <div class="case-value">Talked in circles, complained about $80/mo premium</div>
     </div>
-
-    <!-- CASE 6 -->
-    <div class="case">
-        <div class="case-title">Case #6 — Tracy McCulley (Multi-Decision Maker)</div>
-        <div class="case-subtitle">Constantly busy, rescheduled multiple times, needs mother on call</div>
-        <div class="case-item"><strong>Problem:</strong> Can't make decisions without mom. Keeps rescheduling.</div>
-        <hr class="divider">
-        <div class="case-item"><span class="pivot">The Lesson:</span> <strong>Do NOT accept "I'll check with my mom and call you back."</strong> Get mom on the phone NOW or appointment dies.</div>
-        <div class="case-item"><span class="pivot">Resolution:</span> Zach forced a 3-way call immediately. Both locked in. No more reschedules.</div>
-        <div class="note">📌 Lesson: Multi-decision makers must be locked down upfront. No callbacks. Ever.</div>
+    <div class="case-detail">
+        <div class="case-label">Home:</div>
+        <div class="case-value">$165k mortgage on $170k home</div>
     </div>
-
-    <!-- CASE 7 -->
-    <div class="case">
-        <div class="case-title">Case #7 — Donnie (The Truck Driver)</div>
-        <div class="case-subtitle">Over-the-road driver, wife handles mail, needs morning calls</div>
-        <div class="case-item"><strong>Problem:</strong> Not home during day. Wife is primary. Schedule is non-standard.</div>
-        <hr class="divider">
-        <div class="case-item"><span class="pivot">The Lesson:</span> <strong>Profile your lead by occupation.</strong> Truck drivers, nurses on night shift, etc. have non-standard availability. Ask first.</div>
-        <div class="case-item"><span class="pivot">Resolution:</span> Booked for 6:30am (before his route). Locked him in with security code. No-show prevention.</div>
-        <div class="note">📌 Lesson: Availability matters. Know who you're calling and when they're actually home.</div>
+    <div class="case-detail">
+        <div class="case-label">Objection:</div>
+        <div class="case-value">Wanted coverage for 23-year-old grandson</div>
     </div>
-
-    <!-- CASE 8 -->
-    <div class="case">
-        <div class="case-title">Case #8 — Camilla Abdulbar (The Liar/Guaranteed Issue)</div>
-        <div class="case-subtitle">Lied about health history, denied by all major carriers</div>
-        <div class="case-item"><strong>Problem:</strong> Denied by Mutual of Omaha, Foresters, AND Transamerica.</div>
-        <hr class="divider">
-        <div class="case-item"><span class="pivot">Keith's Pivot:</span> Shifted her to a <strong>Guaranteed Issue policy</strong> (no health exam, no underwriting). Higher premium, but she qualified.</div>
-        <div class="case-item"><span class="pivot">The Close:</span> Camilla got covered. Keith took the commission.</div>
-        <div class="note">📌 Lesson: If major carriers deny → pivot to Guaranteed Issue (American Amicable as LAST resort).</div>
+    <div class="strategy-box">
+        Keith asked: <em>"Is your grandson's current policy overpriced?"</em> Grandson had whole-life at massively inflated rate. Keith pitched <strong>IUL for the grandson</strong> instead—half the price, double the benefits. Locked in Josie by solving her "grandson problem."
     </div>
-
-    <div class="footer-bar">
-        <strong>GARFINKEL FIRM</strong> · CASE STUDIES · CONFIDENTIAL<br>
-        Learn from these. Own the pivots. Don't repeat the mistakes.
+    <div class="result-box">
+        Closed. Grandson switched to IUL. Josie stayed at $80/mo (same price, better coverage).
     </div>
+</div>
 
+<h2>CASE STUDY #3 — SARAH (Live Booking, Driving)</h2>
+<div class="case-study">
+    <div class="case-name">Sarah</div>
+    <div class="case-detail">
+        <div class="case-label">Objection:</div>
+        <div class="case-value">Driving. Couldn't write down security code.</div>
+    </div>
+    <div class="case-detail">
+        <div class="case-label">Issue:</div>
+        <div class="case-value">High no-show risk if no written commitment</div>
+    </div>
+    <div class="strategy-box">
+        <strong>Forced an SMS "Confirmed" reply</strong> immediately after the call to lock her in. Made her commit in writing before hanging up, even though she couldn't write the code by hand.
+    </div>
+    <div class="result-box">
+        Showed up. Closed. SMS confirmation bypassed the no-show risk.
+    </div>
+</div>
+
+<h2>CASE STUDY #4 — VANESSA LEWIS (Aggressive, Rude, Closed Anyway)</h2>
+<div class="case-study">
+    <div class="case-name">Vanessa Lewis</div>
+    <div class="case-detail">
+        <div class="case-label">Tone:</div>
+        <div class="case-value">Angry, rude, "bitchy," impatient</div>
+    </div>
+    <div class="case-detail">
+        <div class="case-label">Quote:</div>
+        <div class="case-value">"I don't got time for this shit"</div>
+    </div>
+    <div class="strategy-box">
+        <strong>Keith stayed aggressively direct.</strong> Did not back down. Matched her tone, didn't apologize. <em>"Look, I don't have time to waste either. Here's what you need to know..."</em> Treated her like she was wrong, not him.
+    </div>
+    <div class="result-box">
+        Closed. Respect earned by not flinching. Vanessa bought because Keith didn't treat her like a victim.
+    </div>
+</div>
+
+<h2>CASE STUDY #5 — CURTIS PLEASANT (Spam Fear, License Verification)</h2>
+<div class="case-study">
+    <div class="case-name">Curtis Pleasant</div>
+    <div class="case-detail">
+        <div class="case-label">Objection:</div>
+        <div class="case-value">Terrified of "Suspected Spam" tags</div>
+    </div>
+    <div class="case-detail">
+        <div class="case-label">Issue:</div>
+        <div class="case-value">Didn't trust that Keith was legitimate</div>
+    </div>
+    <div class="strategy-box">
+        <strong>Keith offered to text his state license and ID immediately</strong> to verify his identity as the firm owner. Built trust through transparency. Sent proof documents via SMS.
+    </div>
+    <div class="result-box">
+        Closed. Spam fear eliminated by credentials. Curtis became a referral source.
+    </div>
+</div>
+
+<h2>CASE STUDY #6 — RENE LOPEZ (Had Forrester's, Reviewed Policy)</h2>
+<div class="case-study">
+    <div class="case-name">Rene Lopez</div>
+    <div class="case-detail">
+        <div class="case-label">Current:</div>
+        <div class="case-value">Forrester's policy for 1 year</div>
+    </div>
+    <div class="case-detail">
+        <div class="case-label">Strategy:</div>
+        <div class="case-value">Used "Incomplete File / Junior Agent" pivot</div>
+    </div>
+    <div class="strategy-box">
+        <strong>"That's why I'm calling—you likely spoke to a junior agent."</strong> Zach booked him for a policy review with Keith. Reframed as a "check-up," not a replacement pitch.
+    </div>
+    <div class="result-box">
+        Closed. Keith reviewed policy, found better rate/coverage combo. Rene upgraded.
+    </div>
+</div>
+
+<h2>CASE STUDY #7 — TRACY McCULLEY (Multi-Reschedule, Mother Tie-Down)</h2>
+<div class="case-study">
+    <div class="case-name">Tracy McCulley</div>
+    <div class="case-detail">
+        <div class="case-label">Issue:</div>
+        <div class="case-value">Constantly busy, rescheduled multiple times</div>
+    </div>
+    <div class="case-detail">
+        <div class="case-label">Decision:</div>
+        <div class="case-value">Needs her mother on the call to decide</div>
+    </div>
+    <div class="strategy-box">
+        <strong>Forced the tie-down upfront.</strong> Zach asked: "Is your mother part of this decision?" Got her confirmed. Scheduled call when BOTH were home. Prevented the "I need to talk to my mom" delay.
+    </div>
+    <div class="result-box">
+        Closed. Three-way call with mother. Approval immediate because no surprises.
+    </div>
+</div>
+
+<h2>CASE STUDY #8 — MIKI BONIN (Driving, Brother Present, Morning Book)</h2>
+<div class="case-study">
+    <div class="case-name">Miki Bonin</div>
+    <div class="case-detail">
+        <div class="case-label">Condition:</div>
+        <div class="case-value">Driving, picking up brother, multitasking</div>
+    </div>
+    <div class="case-detail">
+        <div class="case-label">Tactic:</div>
+        <div class="case-value">Booked for morning (before work)</div>
+    </div>
+    <div class="strategy-box">
+        <strong>Zach recognized he was busy.</strong> Instead of fighting for now, pivot to morning. "Are you available 7am or 7:30am tomorrow before your day starts?" Miki committed because the time worked.
+    </div>
+    <div class="result-box">
+        Showed up. Closed. Timing is everything.
+    </div>
+</div>
+
+<h2>CASE STUDY #9 — HENRY DAVIS (Annoyed by Call Time, Morning Rebook)</h2>
+<div class="case-study">
+    <div class="case-name">Henry Davis</div>
+    <div class="case-detail">
+        <div class="case-label">Issue:</div>
+        <div class="case-value">Doing floor work, annoyed by call time</div>
+    </div>
+    <div class="case-detail">
+        <div class="case-label">Pivot:</div>
+        <div class="case-value">Rebooked for morning</div>
+    </div>
+    <div class="strategy-box">
+        <strong>Zach didn't argue.</strong> "I know you're busy. What time tomorrow morning before work?" Henry committed because Zach was accommodating.
+    </div>
+    <div class="result-box">
+        Showed up. Closed. Respect the customer's schedule.
+    </div>
+</div>
+
+<h2>CASE STUDY #10 — DONNIE (Truck Driver, Wife Decision-Maker)</h2>
+<div class="case-study">
+    <div class="case-name">Donnie</div>
+    <div class="case-detail">
+        <div class="case-label">Job:</div>
+        <div class="case-value">Over-the-road truck driver</div>
+    </div>
+    <div class="case-detail">
+        <div class="case-label">Decision-Maker:</div>
+        <div class="case-value">Wife handles the mail / finances</div>
+    </div>
+    <div class="strategy-box">
+        <strong>Zach tied down the wife upfront.</strong> "Your wife is making this decision, right?" Got her on the line. Scheduled for morning before Donnie's route. Wife became the primary contact.
+    </div>
+    <div class="result-box">
+        Closed. Wife handled the paperwork. No delays.
+    </div>
+</div>
+
+<h2>CASE STUDY #11 — CAMILLA ABDULBAR (Denied by Majors, Guaranteed Issue Pivot)</h2>
+<div class="case-study">
+    <div class="case-name">Camilla Abdulbar</div>
+    <div class="case-detail">
+        <div class="case-label">Health:</div>
+        <div class="case-value">Lied about health, denied by all major carriers</div>
+    </div>
+    <div class="case-detail">
+        <div class="case-label">Pivot:</div>
+        <div class="case-value">Switched to guaranteed-issue policy</div>
+    </div>
+    <div class="strategy-box">
+        <strong>Keith pivoted immediately.</strong> When the majors rejected her, he moved to a guaranteed-issue carrier. No medical exam. Higher premium, but she got approved. Built trust by not giving up.
+    </div>
+    <div class="result-box">
+        Closed. Approved on guaranteed-issue. Client grateful for the solution.
+    </div>
+</div>
+
+<h2>CASE STUDY #12 — JUAN (Booked by Another VA, Non-Committal, After-Work Slot)</h2>
+<div class="case-study">
+    <div class="case-name">Juan</div>
+    <div class="case-detail">
+        <div class="case-label">Origin:</div>
+        <div class="case-value">Booked by another VA (not Zach)</div>
+    </div>
+    <div class="case-detail">
+        <div class="case-label">Tone:</div>
+        <div class="case-value">Non-committal, wishy-washy</div>
+    </div>
+    <div class="case-detail">
+        <div class="case-label">Security Code:</div>
+        <div class="case-value">1869</div>
+    </div>
+    <div class="strategy-box">
+        <strong>Zach pushed for after-work commitment.</strong> "You free after 5pm?" Juan confirmed. Forced the security code (1869) on the spot. Even though Juan was soft, the written commitment locked him in.
+    </div>
+    <div class="result-box">
+        Showed up. Closed. Writing + timing = conversion.
+    </div>
+</div>
+
+</div>
+
+<div class="footer">
+    <strong>GARFINKEL FIRM</strong> · CASE STUDIES & REAL CLOSES · CONFIDENTIAL<br>
+    Study these. Recognize the patterns. Replicate the strategies.
 </div>
 
 </body>
