@@ -1,22 +1,173 @@
 <!DOCTYPE html>
-<html>
-<head><style>
-    body{font-family:sans-serif;line-height:1.5;margin:0;background:#fff;color:#1a1a1a;}
-    .header{background:#0f172a;color:#fff;padding:30px;border-left:6px solid #f59e0b;}
-    .container{padding:30px;}
-    .stat{padding:15px;background:#f1f5f9;border-left:4px solid #1e3a8a;margin-bottom:10px;}
-</style></head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garfinkel Ops Hub</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #1a1a1a;
+            line-height: 1.6;
+            background: #f8fafc;
+            font-size: 11pt;
+        }
+        .header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+            color: #fff;
+            padding: 30px 40px;
+            margin-bottom: 25px;
+            border-left: 6px solid #f59e0b;
+        }
+        .header h1 {
+            margin: 0 0 6px 0;
+            font-size: 28pt;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+        .header .subtitle {
+            font-size: 10pt;
+            opacity: 0.85;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 11pt;
+            font-weight: 500;
+        }
+        nav a:first-child { color: #f59e0b; font-weight: 800; }
+        nav a:hover { opacity: 0.7; }
+        .container { padding: 0 40px 40px 40px; }
+        .intro {
+            background: #dbeafe;
+            border-left: 4px solid #2563eb;
+            padding: 15px;
+            border-radius: 3px;
+            margin-bottom: 25px;
+            font-size: 11pt;
+            color: #0c4a6e;
+        }
+        h2 {
+            background: #0f172a;
+            color: #fff;
+            padding: 10px 16px;
+            font-size: 13pt;
+            margin: 30px 0 15px 0;
+            border-left: 5px solid #f59e0b;
+        }
+        .stat-row {
+            display: flex;
+            gap: 12px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .stat {
+            flex: 1;
+            min-width: 150px;
+            background: #fff;
+            padding: 15px;
+            border-left: 4px solid #1e3a8a;
+            border-radius: 3px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .stat .num {
+            font-size: 18pt;
+            font-weight: 800;
+            color: #b91c1c;
+            display: block;
+        }
+        .stat .label {
+            font-size: 9pt;
+            text-transform: uppercase;
+            color: #475569;
+            letter-spacing: 0.5px;
+        }
+        ul {
+            margin: 15px 0;
+            padding-left: 22px;
+        }
+        li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        a {
+            color: #1e3a8a;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        a:hover { text-decoration: underline; }
+        .footer {
+            margin-top: 40px;
+            padding: 18px 40px;
+            background: #0f172a;
+            color: #94a3b8;
+            font-size: 9pt;
+            text-align: center;
+            border-top: 4px solid #f59e0b;
+        }
+        .footer strong { color: #f59e0b; }
+    </style>
+</head>
 <body>
-<div class="header"><h1>Operational Hub</h1></div>
-<div class="container">
-    <h2>Current Status</h2>
-    <div class="stat"><strong>Goal:</strong> 5 Presentations/Day. We are behind. Move faster.</div>
-    <p>Use the links below to access the ammunition.</p>
-    <ul>
-        <li><a href="MP-Aged-Script-Keith-Garfinkel.html">Aged Scripting</a></li>
-        <li><a href="scripts.html">General Scripts</a></li>
-        <li><a href="training.html">Training</a></li>
-        <li><a href="case-studies.html">Case Studies</a></li>
-    </ul>
+
+<div class="header">
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="scripts.html">SCRIPTS & AGED LEADS</a>
+        <a href="training.html">TRAINING</a>
+        <a href="case-studies.html">CASE STUDIES</a>
+        <a href="Operational-Brief-Garfinkel-Firm.html">OPERATIONAL BRIEF</a>
+    </nav>
+    <div class="subtitle">Garfinkel Mortgage Protection & Life Insurance</div>
+    <h1>Operational Hub</h1>
 </div>
-</body></html>
+
+<div class="container">
+    <div class="intro">
+        <strong>Mission:</strong> Feed Keith 5+ presentations per day. Execute live transfers. Lock down firm commitments. No wishy-washy bookings.
+    </div>
+
+    <h2>CURRENT STATUS</h2>
+    <div class="stat-row">
+        <div class="stat">
+            <span class="num">5+</span>
+            <span class="label">Min. Daily Presentations</span>
+        </div>
+        <div class="stat">
+            <span class="num">$6–10</span>
+            <span class="label">Cost Per Dial</span>
+        </div>
+        <div class="stat">
+            <span class="num">$150–200</span>
+            <span class="label">Per Single Close</span>
+        </div>
+    </div>
+
+    <h2>QUICK ACCESS</h2>
+    <ul>
+        <li><a href="scripts.html">📞 Aged Lead Scripts & Rebuttals</a> — Use these on every call</li>
+        <li><a href="training.html">📚 Training & Product Knowledge</a> — IUL vs Whole Life, Carrier Hierarchy</li>
+        <li><a href="case-studies.html">📋 Case Studies & Real Closes</a> — Real leads, real objections, real closures</li>
+        <li><a href="Operational-Brief-Garfinkel-Firm.html">⚙️ Full Operational Brief</a> — Carrier hierarchy, financial reality, pipeline urgency</li>
+    </ul>
+
+</div>
+
+<div class="footer">
+    <strong>GARFINKEL FIRM</strong> · INTERNAL OPERATIONAL HUB · CONFIDENTIAL<br>
+    Action immediately. No exceptions. Feed the pipeline.
+</div>
+
+</body>
+</html>
